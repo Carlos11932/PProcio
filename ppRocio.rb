@@ -69,10 +69,7 @@ class Payroll
       puts("#{employee.name}: #{salary_employee}")
       notify_employees(employee)
     	memo + salary_employee
-  def pay_employees
-    @employees.reduce(0) do |memo, employee|
-    	memo + employee.calculate_salary
-    end 
+    end
   end
 end
 
@@ -93,4 +90,3 @@ employees << ted
 
 payroll = Payroll.new(employees)
 puts ("Total: " + (payroll.pay_employees).round(2).to_s + "$")
-puts (payroll.pay_employees)
